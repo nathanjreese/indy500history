@@ -12,7 +12,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm install
-          vite build
+          npm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
