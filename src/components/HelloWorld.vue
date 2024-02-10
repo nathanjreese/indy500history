@@ -6,17 +6,18 @@ defineProps({
 })
 
 const count = ref(0)
-const test_env = import.meta.env.VITE_TEST_VALUE
+const test_value = import.meta.env.VITE_TEST_VALUE
+const test_env = import.meta.env.VITE_TEST_ENV
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
+    <button type="button" @click="count++">1ST IS: {{ test_value }}</button>
     <p>
       Edit
-      <code>components/HelloWorld.vue</code> to test {{ test_env }}
+      <code>components/HelloWorld.vue</code> ENV TEST IS: {{ test_env }}
     </p>
   </div>
 
