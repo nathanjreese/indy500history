@@ -1,5 +1,8 @@
 name: Build and Deploy
 on: [push] # defaults to master
+# 👇 global env
+env:
+  VITE_TEST_VALUE: true
 permissions:
   contents: write
 jobs:
