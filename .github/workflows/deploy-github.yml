@@ -3,7 +3,6 @@ on: [push] # defaults to master
 # 👇 global env
 env:
   VITE_TEST_ENV: true
-  VITE_TEST_VALUE: ${{ secrets.VITE_TEST_SECRET }}
 permissions:
   contents: write
 jobs:
@@ -23,4 +22,6 @@ jobs:
         with:
           folder: dist
           branch: gh-pages
+        env: 
+          VITE_TEST_VALUE: "IT WORKED"
           
