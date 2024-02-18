@@ -22,7 +22,6 @@ jobs:
         with:
           folder: dist
           branch: gh-pages
-  get-env:
-    env: 
-      VITE_TEST_VALUE: "IT WORKED"
+        env: 
+          VITE_TEST_VALUE: "IT WORKED"
           
