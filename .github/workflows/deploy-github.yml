@@ -3,12 +3,13 @@ on: [push] # defaults to master
 # 👇 global env
 env:
   VITE_TEST_ENV: 'TEST'
-  VITE_TEST_VALUE: "1111111"
 permissions:
   contents: write
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    commands:
+        - echo "VITE_TEST_VALUE=22222" >> .env 
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
